@@ -2,7 +2,7 @@
 
 #Todo app list
 
-It is a full stack project, where whole frontend and backend designed by self
+It is a full stack project, where whole frontend and backend designed by me
 
 used technologies :
 
@@ -11,3 +11,6 @@ React js
 
 Back end:
 Node js, express js,MongoDB
+
+New update ideas:
+creating a register page, making session, password authentication
