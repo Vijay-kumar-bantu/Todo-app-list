@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  background-color: #f7fc13;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.form_input {
+  width: 823px;
+  height: 46px;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.form_input > input {
+  padding: 10px;
+  width: 595px;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  font-size: inherit;
+  font-weight: 700;
+  outline: none;
+  border: 3px solid #2196f3;
+}
+
+.form_input > button,
+.task_bar > button {
+  height: 100%;
+  width: 150px;
+  border-radius: 10px;
+  background-color: #2196f3;
+  color: #fcfbfb;
+  font-size: inherit;
+  font-weight: 700;
+  border: none;
+}
+
+.task_bar {
+  background-color: #fcfbfb;
+  padding: 10px;
+  width: 823px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+}
+
+.task_bar > p {
+  width: 80%;
+  color: black;
+  font-weight: 800;
+}
+
+.task_bar > button {
+  background-color: #f36d21;
+}
+
+.form_input > input:focus {
+  border: 3px solid black;
+}
+
+.tasks_area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
