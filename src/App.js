@@ -102,6 +102,8 @@ function App() {
     }
   };
 
+  //rendering part
+
   return (
     <div className="App">
       <header>
