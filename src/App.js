@@ -29,7 +29,7 @@ function App() {
             fetched_data.push(value);
           });
 
-          up_tasks([...fetched_data]);
+          up_tasks(fetched_data);
         });
     } catch (e) {
       console.log(e);
