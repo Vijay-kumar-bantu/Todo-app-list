@@ -21,9 +21,14 @@ function App() {
           var fetched_data = [];
 
           data.forEach((element) => {
+            let date = new Date(element.date);
+
             var value = {
               name: element.task_name,
               id: element._id,
+              date: `${date.toLocaleDateString(
+                "en-IN"
+              )} ${date.toLocaleTimeString()}`,
             };
 
             fetched_data.push(value);
@@ -48,13 +53,8 @@ function App() {
       };
       fetch(process.env.REACT_APP_API_ADDRESS, options)
         .then((res) => res.json())
-        .then((data) => {
-          var value = {
-            name: data.task_name,
-            id: data._id,
-          };
-
-          up_tasks([...tasks, value]);
+        .then(() => {
+          fetching();
         });
     } else {
       alert("Please enter the task");
@@ -73,11 +73,8 @@ function App() {
 
     fetch(process.env.REACT_APP_API_ADDRESS, options)
       .then((res) => res.json())
-      .then((data) => {
-        var temp = tasks.filter((task) => {
-          return task.id !== task_id;
-        });
-        up_tasks(temp);
+      .then(() => {
+        fetching();
       });
   };
 
@@ -91,7 +88,7 @@ function App() {
   };
 
   const delete_func = (e) => {
-    const task_id = e.target.id;
+    const task_id = e.target.parentElement.id;
     deleting_tasks(task_id);
   };
 

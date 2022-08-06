@@ -46,12 +46,19 @@ h1 {
   border: 3px solid #2196f3;
 }
 
+.del_button {
+  background-color: #f36d21;
+}
+
+.form_input > button {
+  background-color: #2196f3;
+}
+
 .form_input > button,
 .task_bar > button {
-  height: 100%;
+  height: 3rem;
   width: 150px;
   border-radius: 10px;
-  background-color: #2196f3;
   color: #fcfbfb;
   font-size: inherit;
   font-weight: 700;
@@ -63,20 +70,27 @@ h1 {
   padding: 10px;
   width: 823px;
   height: 70px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  justify-items: self-start;
   align-items: center;
   border: 3px solid black;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
-.task_bar > p {
+.expand {
+  height: 140px;
+}
+
+.task_bar p {
   width: 80%;
   color: black;
   font-weight: 800;
-}
-
-.task_bar > button {
-  background-color: #f36d21;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .form_input > input:focus {
@@ -87,4 +101,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.Icon {
+  margin: 10px;
 }
